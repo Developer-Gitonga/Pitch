@@ -1,0 +1,21 @@
+
+<div class="text-center mt-5">
+    <a href="{{ url_for('main.index')}}" style="font-family:Raleway">Home</a>
+    {% if current_user.is_anonymous %}
+
+
+    {% else %}
+    <a href="{{url_for('main.user',username=current_user.username)}}" style="font-family:Raleway">Profile</a>
+    <a href="{{url_for('main.logout')}}" style="font-family:Raleway">Logout</a>
+    {% endif %}
+</div>
+<hr>
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li style="font-family:Raleway">{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+{% endwith %}

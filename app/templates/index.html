@@ -1,0 +1,30 @@
+{% extends "base.html"%}
+
+
+{% block content %}
+
+<div class="text-center mt-5" style="font-family:Raleway">
+
+    <h1>{{current_user.username}}</h1>
+    {% for post in posts %}
+
+    <div class="text-center">
+        <p> {{post}} </p>
+
+        <div class="text-center">
+            <a href="{{url_for('main.login')}}">login</a>
+        </div>
+        {% endfor%}
+        <ul>
+            {% for blog in blogs %}
+            <li>
+                <h1>{{blog.title}}</h1>
+                <p>{{blog.description}}</p>
+            </li>
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>
+
+{% endblock%}
