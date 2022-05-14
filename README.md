@@ -8,7 +8,7 @@ Pitch is a web app that allows users to login and create pitches
 To get a local copy to your machine.
 ### Setup
 * Download or clone files from this repo.
-Repository link: [Pitches]()
+Repository link: [Pitch](https://github.com/Developer-Gitonga/Pitch)
 ### Developed with
 * Flask.
 * HTML for structure.
