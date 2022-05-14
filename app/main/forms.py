@@ -36,3 +36,4 @@ class PostForm(FlaskForm):
     description = TextAreaField('Description', validators=[DataRequired()])
 
     submit = SubmitField('Publish')
+    
